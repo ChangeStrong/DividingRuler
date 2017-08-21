@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPd-bp-71f">
+                                <rect key="frame" x="115" y="151" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.51523416498316033" green="1" blue="0.33566916606951369" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zIg-dX-NUY"/>
+                                </constraints>
+                                <state key="normal" title="跳转到指定值"/>
+                                <connections>
+                                    <action selector="currentValueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O1f-2W-7tP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入最大刻度数值" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37D-iE-Zs8">
+                                <rect key="frame" x="87" y="368" width="147" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-Yl-4RS">
+                                <rect key="frame" x="115" y="442" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="UMn-wZ-J6F"/>
+                                    <constraint firstAttribute="height" constant="30" id="cwh-fS-Mee"/>
+                                </constraints>
+                                <state key="normal" title="更新刻度界面"/>
+                                <connections>
+                                    <action selector="updateRulerUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7u2-hQ-tup"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入想要跳转的值" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b82-Tb-CIl">
+                                <rect key="frame" x="87" y="112" width="147" height="30"/>
+                                <color key="backgroundColor" red="0.86793017654119575" green="0.83867355805799249" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="5CY-BY-Qgc"/>
+                                    <constraint firstAttribute="height" constant="30" id="kjJ-ZX-Xdb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="37D-iE-Zs8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="348" id="5dy-IO-RcI"/>
+                            <constraint firstItem="37D-iE-Zs8" firstAttribute="trailing" secondItem="b82-Tb-CIl" secondAttribute="trailing" id="Bxd-0i-AvY"/>
+                            <constraint firstItem="cFe-Yl-4RS" firstAttribute="top" secondItem="37D-iE-Zs8" secondAttribute="bottom" constant="44" id="FOm-6R-f2b"/>
+                            <constraint firstAttribute="trailing" secondItem="b82-Tb-CIl" secondAttribute="trailing" constant="176" id="Jai-AU-WZV"/>
+                            <constraint firstAttribute="trailing" secondItem="kPd-bp-71f" secondAttribute="trailing" constant="115" id="LTZ-Fx-Yj3"/>
+                            <constraint firstItem="b82-Tb-CIl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="O77-AZ-c1b"/>
+                            <constraint firstItem="b82-Tb-CIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="208" id="PJj-G2-bd2"/>
+                            <constraint firstAttribute="trailing" secondItem="cFe-Yl-4RS" secondAttribute="trailing" constant="231" id="RJo-oQ-wfG"/>
+                            <constraint firstItem="37D-iE-Zs8" firstAttribute="height" secondItem="b82-Tb-CIl" secondAttribute="height" id="Rfr-e9-XIP"/>
+                            <constraint firstItem="37D-iE-Zs8" firstAttribute="leading" secondItem="b82-Tb-CIl" secondAttribute="leading" id="YGF-Hw-hUb"/>
+                            <constraint firstItem="kPd-bp-71f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="131" id="ZL8-Xx-s9C"/>
+                            <constraint firstItem="kPd-bp-71f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="231" id="beU-q3-P92"/>
+                            <constraint firstItem="cFe-Yl-4RS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hcu-kY-wEl"/>
+                            <constraint firstItem="b82-Tb-CIl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wea-Zt-Zma"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Jai-AU-WZV"/>
+                                <exclude reference="PJj-G2-bd2"/>
+                                <exclude reference="beU-q3-P92"/>
+                                <exclude reference="RJo-oQ-wfG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bigestValueTextFeild" destination="37D-iE-Zs8" id="plV-Uw-oUJ"/>
+                        <outlet property="currentValueTextFeild" destination="b82-Tb-CIl" id="I7V-iB-3b1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="355"/>
+        </scene>
+    </scenes>
+</document>
